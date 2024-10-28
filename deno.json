@@ -1,7 +1,7 @@
 {
   "name": "@popov/html-template-engine",
   "license": "MIT",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "exports": "./mod.ts",
   "imports": {
     "@popov/logger": "jsr:@popov/logger@^2.0.0"

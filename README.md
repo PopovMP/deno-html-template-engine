@@ -58,11 +58,14 @@ console.log(result); // "<div>Hello, World!</div>"
 
 ### Render the content conditionally.
 
+```html
 <h1>Template file</h1>
- <!-- renderIf(property); -->
-  <h2>Content to render if the property is true.</h2>
- <!-- endIf(); -->
-  ```typescript
+<!-- renderIf(property); -->
+   <h2>Content to render if the property is true.</h2>
+<!-- endIf(); -->
+```
+
+```typescript
  const html = "<h1>Template file</h1>" +
    "<!-- renderIf(show); -->" +
      "<h2>Shown</h2>" +
@@ -74,7 +77,7 @@ console.log(result); // "<div>Hello, World!</div>"
  const viewModel = { show: true, dontShow: false };
  const result = renderIf(html, viewModel);
  console.log(result); // "<h1>Template file</h1><h2>Shown</h2>"
- ```
+```
 
 ### Minify the HTML - remove leading spaces, empty lines and trim.
 

@@ -62,10 +62,12 @@
  *
  * ### Render the content conditionally.
  *
- * <h1>Template file</h1>
- * <!-- renderIf(property); -->
- *  <h2>Content to render if the property is true.</h2>
- * <!-- endIf(); -->
+ * ```html 
+ *  <h1>Template file</h1>
+ *  <!-- renderIf(property); -->
+ *    <h2>Content to render if the property is true.</h2>
+ *  <!-- endIf(); -->
+ * ```
  *
  * ```typescript
  * const html = "<h1>Template file</h1>" +
