@@ -1,0 +1,35 @@
+{
+  "version": "4",
+  "specifiers": {
+    "jsr:@popov/file-writer@^1.1.3": "1.1.3",
+    "jsr:@popov/logger@2": "2.0.0",
+    "npm:@types/node@*": "22.5.4"
+  },
+  "jsr": {
+    "@popov/file-writer@1.1.3": {
+      "integrity": "85827d546c905cd3e890c36c75f7cef0dcaa6731c8085463469192d9bed944fd"
+    },
+    "@popov/logger@2.0.0": {
+      "integrity": "30f7f93b26fe7115ea8ecb53797ce1bc0b2b6c878790ee6588ebd64f1baaf28c",
+      "dependencies": [
+        "jsr:@popov/file-writer"
+      ]
+    }
+  },
+  "npm": {
+    "@types/node@22.5.4": {
+      "integrity": "sha512-FDuKUJQm/ju9fT/SeX/6+gBzoPzlVCzfzmGkwKvRHQVxi4BntVbyIwf6a4Xn62mrvndLiml6z/UBXIdEVjQLXg==",
+      "dependencies": [
+        "undici-types"
+      ]
+    },
+    "undici-types@6.19.8": {
+      "integrity": "sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw=="
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@popov/logger@2"
+    ]
+  }
+}
