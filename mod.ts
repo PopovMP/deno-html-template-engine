@@ -1,11 +1,22 @@
 /**
  * # HTML Template Engine
  *
- * Syntax:
- *   <!-- key --> - placeholder for the value from the view model
- *   <!-- include(filename.html); --> - include a file
- *   <!-- includeIf(property, filename.html); --> - include a file conditionally
- *   <!-- renderIf(property); --> ... <!-- endIf(); --> - render content conditionally
+ * The template engine encodes the operatrions within HTML comments.
+ * 
+ * ```html
+ * Replace the placeholder with teh value of `viewModel.key`.
+ * <!-- key -->
+ * 
+ * Include the file content
+ * <!-- include(filename.html); -->
+ * 
+ * The file content will be included if `viewModel.isInclude` is true.
+ * <!-- includeIf(isInclude, filename.html); -->
+ * 
+ * <!-- renderIf(property); -->
+ *   This content is conditonal
+ * <!-- endIf(); -->
+ * ```
  *
  * ## Examples:
  *
