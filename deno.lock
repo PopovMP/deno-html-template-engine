@@ -1,16 +1,16 @@
 {
   "version": "4",
   "specifiers": {
-    "jsr:@popov/file-writer@^1.1.3": "1.1.3",
-    "jsr:@popov/logger@2": "2.0.0",
+    "jsr:@popov/file-writer@^1.2.0": "1.2.0",
+    "jsr:@popov/logger@^2.1.0": "2.1.0",
     "npm:@types/node@*": "22.5.4"
   },
   "jsr": {
-    "@popov/file-writer@1.1.3": {
-      "integrity": "85827d546c905cd3e890c36c75f7cef0dcaa6731c8085463469192d9bed944fd"
+    "@popov/file-writer@1.2.0": {
+      "integrity": "f73edc90938d734cff781ddbc0c2e62d220222d8b420f2df2c45ad784c7f3348"
     },
-    "@popov/logger@2.0.0": {
-      "integrity": "30f7f93b26fe7115ea8ecb53797ce1bc0b2b6c878790ee6588ebd64f1baaf28c",
+    "@popov/logger@2.1.0": {
+      "integrity": "5c4a40c3420617c0697011f7bb5292fd20ed746690d03134f265a5502b327a2b",
       "dependencies": [
         "jsr:@popov/file-writer"
       ]
@@ -29,7 +29,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@popov/logger@2"
+      "jsr:@popov/logger@^2.1.0"
     ]
   }
 }

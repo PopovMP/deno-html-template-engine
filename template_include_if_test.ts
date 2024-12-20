@@ -1,12 +1,9 @@
+import { test } from "node:test";
+import { deepStrictEqual } from "node:assert";
+
 import { includeFilesIf, setFileReader } from "./template.ts";
 
-function assertEquals(actual: string, expected: string, msg?: string): void {
-  if (actual !== expected) {
-    throw new Error(msg || `Expected "${expected}", got "${actual}"`);
-  }
-}
-
-Deno.test("includeFilesIf() single include", async () => {
+test("includeFilesIf() single include", async () => {
   const html = "<div><!-- includeIf(isInclude, filename.txt); --></div>";
   const viewModel = { isInclude: true };
   const fileReader = (filename: string): Promise<string> => {
@@ -15,10 +12,10 @@ Deno.test("includeFilesIf() single include", async () => {
   setFileReader(fileReader);
   const actual = await includeFilesIf(html, ".", viewModel);
   const expected = "<div>Hello, filename.txt!</div>";
-  assertEquals(actual, expected);
+  deepStrictEqual(actual, expected);
 });
 
-Deno.test("includeFilesIf() include false", async () => {
+test("includeFilesIf() include false", async () => {
   const html = "<div><!-- includeIf(isInclude, filename.txt); --></div>";
   const viewModel = { isInclude: false };
   const fileReader = (filename: string): Promise<string> => {
@@ -28,10 +25,10 @@ Deno.test("includeFilesIf() include false", async () => {
   setFileReader(fileReader);
   const actual = await includeFilesIf(html, ".", viewModel);
   const expected = "<div></div>";
-  assertEquals(actual, expected);
+  deepStrictEqual(actual, expected);
 });
 
-Deno.test("includeFilesIf() missing file", async () => {
+test("includeFilesIf() missing file", async () => {
   const html = "<div><!-- includeIf(isInclude, missing.txt); --></div>";
   const viewModel = { isInclude: true };
   const fileReader = (filename: string): Promise<string> => {
@@ -41,5 +38,5 @@ Deno.test("includeFilesIf() missing file", async () => {
   setFileReader(fileReader);
   const actual = await includeFilesIf(html, ".", viewModel);
   const expected = "<div></div>";
-  assertEquals(actual, expected);
+  deepStrictEqual(actual, expected);
 });

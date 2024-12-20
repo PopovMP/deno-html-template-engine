@@ -1,6 +1,6 @@
 # HTML Template Engine
 
-The template engine encodes the operatrions within HTML comments.
+The template engine encodes the operations within HTML comments.
 
 ```html
 Replace the placeholder with teh value of `viewModel.key`.
@@ -13,7 +13,7 @@ The file content will be included if `viewModel.isInclude` is true.
 <!-- includeIf(isInclude, filename.html); -->
 
 <!-- renderIf(property); -->
-  This content is conditonal
+This content is conditonal
 <!-- endIf(); -->
 ```
 
@@ -71,22 +71,22 @@ console.log(result); // "<div>Hello, World!</div>"
 ```html
 <h1>Template file</h1>
 <!-- renderIf(property); -->
-   <h2>Content to render if the property is true.</h2>
+<h2>Content to render if the property is true.</h2>
 <!-- endIf(); -->
 ```
 
 ```typescript
- const html = "<h1>Template file</h1>" +
-   "<!-- renderIf(show); -->" +
-     "<h2>Shown</h2>" +
-   "<!-- endIf(); -->" +
-   "<!-- renderIf(dontShow); -->" +
-     "<h2>Not shown</h2>" +
-   "<!-- endIf(); -->";
- ;
- const viewModel = { show: true, dontShow: false };
- const result = renderIf(html, viewModel);
- console.log(result); // "<h1>Template file</h1><h2>Shown</h2>"
+const html = "<h1>Template file</h1>" +
+  "<!-- renderIf(show); -->" +
+  "<h2>Shown</h2>" +
+  "<!-- endIf(); -->" +
+  "<!-- renderIf(dontShow); -->" +
+  "<h2>Not shown</h2>" +
+  "<!-- endIf(); -->";
+
+const viewModel = { show: true, dontShow: false };
+const result = renderIf(html, viewModel);
+console.log(result); // "<h1>Template file</h1><h2>Shown</h2>"
 ```
 
 ### Minify the HTML - remove leading spaces, empty lines and trim.

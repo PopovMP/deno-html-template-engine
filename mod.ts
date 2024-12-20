@@ -1,20 +1,20 @@
 /**
  * # HTML Template Engine
  *
- * The template engine encodes the operatrions within HTML comments.
- * 
+ * The template engine encodes the operations within HTML comments.
+ *
  * ```html
  * Replace the placeholder with teh value of `viewModel.key`.
  * <!-- key -->
- * 
+ *
  * Include the file content
  * <!-- include(filename.html); -->
- * 
+ *
  * The file content will be included if `viewModel.isInclude` is true.
  * <!-- includeIf(isInclude, filename.html); -->
- * 
+ *
  * <!-- renderIf(property); -->
- *   This content is conditonal
+ *   This content is conditional
  * <!-- endIf(); -->
  * ```
  *
@@ -73,7 +73,7 @@
  *
  * ### Render the content conditionally.
  *
- * ```html 
+ * ```html
  *  <h1>Template file</h1>
  *  <!-- renderIf(property); -->
  *    <h2>Content to render if the property is true.</h2>

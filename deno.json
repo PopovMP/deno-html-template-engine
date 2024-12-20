@@ -4,6 +4,6 @@
   "version": "1.0.3",
   "exports": "./mod.ts",
   "imports": {
-    "@popov/logger": "jsr:@popov/logger@^2.0.0"
+    "@popov/logger": "jsr:@popov/logger@^2.1.0"
   }
 }
